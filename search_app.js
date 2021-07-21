@@ -7,8 +7,6 @@ inputElement.addEventListener("keyup", (event) => {
 
   fetch(`https://itunes.apple.com/search?term=${value}&entity=song`)
     .then((response) => {
-      const loader = document.querySelector("p");
-      loader.innerText = "Loading data";
       return response.json();
     })
     .then((data) => {
